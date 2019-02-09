@@ -13,6 +13,7 @@
 		E619CFEE220C51E4001F557F /* TFS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E619CFEC220C51E4001F557F /* TFS.xcdatamodeld */; };
 		E619CFF0220C51E5001F557F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E619CFEF220C51E5001F557F /* Assets.xcassets */; };
 		E619CFF3220C51E5001F557F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E619CFF1220C51E5001F557F /* LaunchScreen.storyboard */; };
+		E6E54C28220DC50E00352248 /* output.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E54C27220DC50E00352248 /* output.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E619CFEF220C51E5001F557F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E619CFF2220C51E5001F557F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E619CFF4220C51E5001F557F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6E54C27220DC50E00352248 /* output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = output.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				E619CFE5220C51E4001F557F /* AppDelegate.swift */,
 				E619CFE7220C51E4001F557F /* ViewController.swift */,
+				E6E54C27220DC50E00352248 /* output.swift */,
 				E619CFE9220C51E4001F557F /* Main.storyboard */,
 				E619CFEF220C51E5001F557F /* Assets.xcassets */,
 				E619CFF1220C51E5001F557F /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E54C28220DC50E00352248 /* output.swift in Sources */,
 				E619CFE8220C51E4001F557F /* ViewController.swift in Sources */,
 				E619CFEE220C51E4001F557F /* TFS.xcdatamodeld in Sources */,
 				E619CFE6220C51E4001F557F /* AppDelegate.swift in Sources */,
@@ -288,6 +292,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S77KJ672M8;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = TFS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,6 +303,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = indexStorm.TFS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LOG_ENABLED";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
