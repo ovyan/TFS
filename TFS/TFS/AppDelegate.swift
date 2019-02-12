@@ -23,13 +23,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {out.printer()}
+    func applicationWillResignActive(_ application: UIApplication) {
+        out.printer()
+    }
 
-    func applicationDidEnterBackground(_ application: UIApplication) {out.printer()}
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        out.printer()
+    }
 
-    func applicationWillEnterForeground(_ application: UIApplication) {out.printer()}
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        out.printer()
+    }
 
-    func applicationDidBecomeActive(_ application: UIApplication) {out.printer()}
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        out.printer()
+    }
 
-    func applicationWillTerminate(_ application: UIApplication) {out.printer()}
+    func applicationWillTerminate(_ application: UIApplication) {
+        out.printer()
+    }
 }

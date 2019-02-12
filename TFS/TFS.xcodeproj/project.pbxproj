@@ -13,7 +13,7 @@
 		E619CFEE220C51E4001F557F /* TFS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E619CFEC220C51E4001F557F /* TFS.xcdatamodeld */; };
 		E619CFF0220C51E5001F557F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E619CFEF220C51E5001F557F /* Assets.xcassets */; };
 		E619CFF3220C51E5001F557F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E619CFF1220C51E5001F557F /* LaunchScreen.storyboard */; };
-		E6E54C28220DC50E00352248 /* output.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E54C27220DC50E00352248 /* output.swift */; };
+		E6E54C28220DC50E00352248 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E54C27220DC50E00352248 /* Output.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		E619CFEF220C51E5001F557F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E619CFF2220C51E5001F557F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E619CFF4220C51E5001F557F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6E54C27220DC50E00352248 /* output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = output.swift; sourceTree = "<group>"; };
+		E6E54C27220DC50E00352248 /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				E619CFE5220C51E4001F557F /* AppDelegate.swift */,
 				E619CFE7220C51E4001F557F /* ViewController.swift */,
-				E6E54C27220DC50E00352248 /* output.swift */,
+				E6E54C27220DC50E00352248 /* Output.swift */,
 				E619CFE9220C51E4001F557F /* Main.storyboard */,
 				E619CFEF220C51E5001F557F /* Assets.xcassets */,
 				E619CFF1220C51E5001F557F /* LaunchScreen.storyboard */,
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6E54C28220DC50E00352248 /* output.swift in Sources */,
+				E6E54C28220DC50E00352248 /* Output.swift in Sources */,
 				E619CFE8220C51E4001F557F /* ViewController.swift in Sources */,
 				E619CFEE220C51E4001F557F /* TFS.xcdatamodeld in Sources */,
 				E619CFE6220C51E4001F557F /* AppDelegate.swift in Sources */,
@@ -221,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -276,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
