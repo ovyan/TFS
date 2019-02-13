@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E619CFE6220C51E4001F557F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619CFE5220C51E4001F557F /* AppDelegate.swift */; };
-		E619CFE8220C51E4001F557F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619CFE7220C51E4001F557F /* ViewController.swift */; };
+		E619CFE8220C51E4001F557F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619CFE7220C51E4001F557F /* ProfileViewController.swift */; };
 		E619CFEB220C51E4001F557F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E619CFE9220C51E4001F557F /* Main.storyboard */; };
 		E619CFEE220C51E4001F557F /* TFS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E619CFEC220C51E4001F557F /* TFS.xcdatamodeld */; };
 		E619CFF0220C51E5001F557F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E619CFEF220C51E5001F557F /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		E619CFE2220C51E4001F557F /* TFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E619CFE5220C51E4001F557F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E619CFE7220C51E4001F557F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E619CFE7220C51E4001F557F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E619CFEA220C51E4001F557F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E619CFED220C51E4001F557F /* TFS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TFS.xcdatamodel; sourceTree = "<group>"; };
 		E619CFEF220C51E5001F557F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				E619CFE5220C51E4001F557F /* AppDelegate.swift */,
-				E619CFE7220C51E4001F557F /* ViewController.swift */,
+				E619CFE7220C51E4001F557F /* ProfileViewController.swift */,
 				E6E54C27220DC50E00352248 /* Output.swift */,
 				E619CFE9220C51E4001F557F /* Main.storyboard */,
 				E619CFEF220C51E5001F557F /* Assets.xcassets */,
@@ -142,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E54C28220DC50E00352248 /* Output.swift in Sources */,
-				E619CFE8220C51E4001F557F /* ViewController.swift in Sources */,
+				E619CFE8220C51E4001F557F /* ProfileViewController.swift in Sources */,
 				E619CFEE220C51E4001F557F /* TFS.xcdatamodeld in Sources */,
 				E619CFE6220C51E4001F557F /* AppDelegate.swift in Sources */,
 			);
