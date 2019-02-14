@@ -15,7 +15,7 @@ public final class Out {
     var prevState: UIApplication.State
     
     public func printer(_ caller: String = #function) {
-        #if LOG_ENABLED
+        #if !LOG_ENABLED
             let currState = UIApplication.shared.applicationState
             let currStateString = stateToString(with: currState)
             let prevStateString = stateToString(with: prevState)
