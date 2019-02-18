@@ -21,12 +21,38 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // On this step not all of the constraints are set to their final values
+        // Thus, frame of the button is calculated without considering other constraints
+        guard let editButtonFrame = editButton?.frame else {
+            return
+        }
+        print("Frame is in \(#function) with properties: \(editButtonFrame)")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // На данном этапе все constraints установлены
+        // Значение frame отличается от предыдущего, так как оно уже корректно и рассчитано с учетом всех constraints
+        guard let editButtonFrame = editButton?.frame else {
+            return
+        }
+        print("Frame is in \(#function) with properties: \(editButtonFrame)")
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setupAvatar()
         setupButton()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        // On this step outlets are not set, therefore, have a nil value
+        guard let editButtonFrame = editButton?.frame else {
+            return
+        }
+        print("Frame is in \(#function) with properties: \(editButtonFrame)")
     }
     
     func setupAvatar() {
