@@ -16,14 +16,14 @@ class ProfileViewController: UIViewController {
     @IBOutlet var editButton: UIButton!
     
     @IBAction func handlePhotoTap(_ sender: Any) {
-        print("Choose profile pic")
+        print("Choose a profile pic")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // On this step not all of the constraints are set to their final values
-        // Thus, frame of the button is calculated without considering other constraints
+        // Thus, a frame of the button is calculated without considering other constraints
         guard let editButtonFrame = editButton?.frame else {
             return
         }
@@ -31,8 +31,10 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // На данном этапе все constraints установлены
-        // Значение frame отличается от предыдущего, так как оно уже корректно и рассчитано с учетом всех constraints
+        super.viewDidAppear(true)
+        
+        // On this step all of the constrainst have its final values
+        // Hence, the frame has been recalculated and now has its final value too
         guard let editButtonFrame = editButton?.frame else {
             return
         }
