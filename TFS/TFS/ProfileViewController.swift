@@ -20,13 +20,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         present(alert, animated: true, completion: nil)
     }
     
-    let imagePC = UIImagePickerController()
-    
     let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imagePC.delegate = self
         setAlert()
         
         // On this step not all of the constraints are set to their final values
