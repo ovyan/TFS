@@ -14,6 +14,7 @@
 		E619CFF0220C51E5001F557F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E619CFEF220C51E5001F557F /* Assets.xcassets */; };
 		E619CFF3220C51E5001F557F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E619CFF1220C51E5001F557F /* LaunchScreen.storyboard */; };
 		E6E54C28220DC50E00352248 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E54C27220DC50E00352248 /* Output.swift */; };
+		E6E8BAA6221DB7D5007D7E2B /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E8BAA5221DB7D5007D7E2B /* TestVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E619CFF2220C51E5001F557F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E619CFF4220C51E5001F557F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6E54C27220DC50E00352248 /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
+		E6E8BAA5221DB7D5007D7E2B /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,49 @@
 		E619CFE4220C51E4001F557F /* TFS */ = {
 			isa = PBXGroup;
 			children = (
-				E619CFE5220C51E4001F557F /* AppDelegate.swift */,
-				E619CFE7220C51E4001F557F /* ProfileViewController.swift */,
-				E6E54C27220DC50E00352248 /* Output.swift */,
+				E68EF6E3222097490060B8F1 /* Service */,
+				E68EF6E42220978E0060B8F1 /* Model */,
+				E68EF6E6222098020060B8F1 /* Module */,
 				E619CFE9220C51E4001F557F /* Main.storyboard */,
+				E619CFE5220C51E4001F557F /* AppDelegate.swift */,
+				E6E8BAA5221DB7D5007D7E2B /* TestVC.swift */,
+				E6E54C27220DC50E00352248 /* Output.swift */,
 				E619CFEF220C51E5001F557F /* Assets.xcassets */,
 				E619CFF1220C51E5001F557F /* LaunchScreen.storyboard */,
 				E619CFF4220C51E5001F557F /* Info.plist */,
 				E619CFEC220C51E4001F557F /* TFS.xcdatamodeld */,
 			);
 			path = TFS;
+			sourceTree = "<group>";
+		};
+		E68EF6E3222097490060B8F1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E68EF6E42220978E0060B8F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E68EF6E6222098020060B8F1 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E68EF6E72220985D0060B8F1 /* Profile */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		E68EF6E72220985D0060B8F1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E619CFE7220C51E4001F557F /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E8BAA6221DB7D5007D7E2B /* TestVC.swift in Sources */,
 				E6E54C28220DC50E00352248 /* Output.swift in Sources */,
 				E619CFE8220C51E4001F557F /* ProfileViewController.swift in Sources */,
 				E619CFEE220C51E4001F557F /* TFS.xcdatamodeld in Sources */,

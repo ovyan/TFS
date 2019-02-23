@@ -26,23 +26,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         setAlert()
         
-        // On this step not all of the constraints are set to their final values
-        // Thus, a frame of the button is calculated without considering other constraints
-        guard let editButtonFrame = editButton?.frame else {
-            return
-        }
-        print("Frame is in \(#function) with properties: \(editButtonFrame)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        // On this step all of the constrainst have its final values
-        // Hence, the frame has been recalculated for the specific device and now has its final value too
-        guard let editButtonFrame = editButton?.frame else {
-            return
-        }
-        print("Frame is in \(#function) with properties: \(editButtonFrame)")
     }
     
     override func viewDidLayoutSubviews() {
@@ -54,11 +42,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        // On this step outlets are not set, therefore, have a nil value
-        guard let editButtonFrame = editButton?.frame else {
-            return
-        }
-        print("Frame is in \(#function) with properties: \(editButtonFrame)")
     }
     
     private func presentImagePicker(with type: UIImagePickerController.SourceType) {
