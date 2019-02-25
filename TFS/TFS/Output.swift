@@ -29,7 +29,7 @@ public final class Out {
         #endif
     }
     
-    private func stateToString(with state: UIApplication.State) -> String {
+    func stateToString(with state: UIApplication.State) -> String {
         switch state {
         case .active:
             return "active"

@@ -14,7 +14,15 @@
 		E619CFF0220C51E5001F557F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E619CFEF220C51E5001F557F /* Assets.xcassets */; };
 		E619CFF3220C51E5001F557F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E619CFF1220C51E5001F557F /* LaunchScreen.storyboard */; };
 		E6E54C28220DC50E00352248 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E54C27220DC50E00352248 /* Output.swift */; };
-		E6E8BAA6221DB7D5007D7E2B /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E8BAA5221DB7D5007D7E2B /* TestVC.swift */; };
+		E6F378992224526E00794DD5 /* ConversationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F378982224526E00794DD5 /* ConversationCellViewModel.swift */; };
+		E6F3789B222452B300794DD5 /* ConversationCellViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F3789A222452B300794DD5 /* ConversationCellViewModelImp.swift */; };
+		E6F3789D222452CF00794DD5 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F3789C222452CF00794DD5 /* ConversationCell.swift */; };
+		E6F3789F2224532000794DD5 /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F3789E2224532000794DD5 /* ConversationsListViewController.swift */; };
+		E6F378A22224537700794DD5 /* ConversationListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F378A02224537700794DD5 /* ConversationListProvider.swift */; };
+		E6F378A32224537700794DD5 /* DialogMessageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F378A12224537700794DD5 /* DialogMessageProvider.swift */; };
+		E6F378A52224548800794DD5 /* ConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F378A42224548800794DD5 /* ConversationModel.swift */; };
+		E6F378A92224551100794DD5 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F378A82224551100794DD5 /* ConversationViewController.swift */; };
+		E6F378AB2224552000794DD5 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F378AA2224552000794DD5 /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +35,15 @@
 		E619CFF2220C51E5001F557F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E619CFF4220C51E5001F557F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6E54C27220DC50E00352248 /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
-		E6E8BAA5221DB7D5007D7E2B /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		E6F378982224526E00794DD5 /* ConversationCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellViewModel.swift; sourceTree = "<group>"; };
+		E6F3789A222452B300794DD5 /* ConversationCellViewModelImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCellViewModelImp.swift; sourceTree = "<group>"; };
+		E6F3789C222452CF00794DD5 /* ConversationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		E6F3789E2224532000794DD5 /* ConversationsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsListViewController.swift; sourceTree = "<group>"; };
+		E6F378A02224537700794DD5 /* ConversationListProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListProvider.swift; sourceTree = "<group>"; };
+		E6F378A12224537700794DD5 /* DialogMessageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogMessageProvider.swift; sourceTree = "<group>"; };
+		E6F378A42224548800794DD5 /* ConversationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationModel.swift; sourceTree = "<group>"; };
+		E6F378A82224551100794DD5 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		E6F378AA2224552000794DD5 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +81,6 @@
 				E68EF6E6222098020060B8F1 /* Module */,
 				E619CFE9220C51E4001F557F /* Main.storyboard */,
 				E619CFE5220C51E4001F557F /* AppDelegate.swift */,
-				E6E8BAA5221DB7D5007D7E2B /* TestVC.swift */,
 				E6E54C27220DC50E00352248 /* Output.swift */,
 				E619CFEF220C51E5001F557F /* Assets.xcassets */,
 				E619CFF1220C51E5001F557F /* LaunchScreen.storyboard */,
@@ -78,6 +93,8 @@
 		E68EF6E3222097490060B8F1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				E6F378A02224537700794DD5 /* ConversationListProvider.swift */,
+				E6F378A12224537700794DD5 /* DialogMessageProvider.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -85,6 +102,7 @@
 		E68EF6E42220978E0060B8F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E6F378A42224548800794DD5 /* ConversationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -92,6 +110,8 @@
 		E68EF6E6222098020060B8F1 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				E6F378A6222454D900794DD5 /* Dialog */,
+				E6F378962224522100794DD5 /* Chat */,
 				E68EF6E72220985D0060B8F1 /* Profile */,
 			);
 			path = Module;
@@ -103,6 +123,42 @@
 				E619CFE7220C51E4001F557F /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		E6F378962224522100794DD5 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				E6F3789E2224532000794DD5 /* ConversationsListViewController.swift */,
+				E6F378972224523000794DD5 /* Cell */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		E6F378972224523000794DD5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E6F3789C222452CF00794DD5 /* ConversationCell.swift */,
+				E6F378982224526E00794DD5 /* ConversationCellViewModel.swift */,
+				E6F3789A222452B300794DD5 /* ConversationCellViewModelImp.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E6F378A6222454D900794DD5 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				E6F378A82224551100794DD5 /* ConversationViewController.swift */,
+				E6F378A7222454F100794DD5 /* Cell */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		E6F378A7222454F100794DD5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E6F378AA2224552000794DD5 /* MessageCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,11 +232,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6E8BAA6221DB7D5007D7E2B /* TestVC.swift in Sources */,
+				E6F378A22224537700794DD5 /* ConversationListProvider.swift in Sources */,
+				E6F378A52224548800794DD5 /* ConversationModel.swift in Sources */,
+				E6F378A92224551100794DD5 /* ConversationViewController.swift in Sources */,
+				E6F3789B222452B300794DD5 /* ConversationCellViewModelImp.swift in Sources */,
 				E6E54C28220DC50E00352248 /* Output.swift in Sources */,
 				E619CFE8220C51E4001F557F /* ProfileViewController.swift in Sources */,
+				E6F3789D222452CF00794DD5 /* ConversationCell.swift in Sources */,
 				E619CFEE220C51E4001F557F /* TFS.xcdatamodeld in Sources */,
+				E6F3789F2224532000794DD5 /* ConversationsListViewController.swift in Sources */,
 				E619CFE6220C51E4001F557F /* AppDelegate.swift in Sources */,
+				E6F378A32224537700794DD5 /* DialogMessageProvider.swift in Sources */,
+				E6F378992224526E00794DD5 /* ConversationCellViewModel.swift in Sources */,
+				E6F378AB2224552000794DD5 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

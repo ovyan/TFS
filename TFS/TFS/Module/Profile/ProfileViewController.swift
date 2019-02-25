@@ -39,12 +39,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         setupButton()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
+    @IBAction func dismiss() {
+        dismiss(animated: true)
     }
     
-    private func presentImagePicker(with type: UIImagePickerController.SourceType) {
+    func presentImagePicker(with type: UIImagePickerController.SourceType) {
         let picker = UIImagePickerController()
         picker.sourceType = type
         picker.delegate = self
