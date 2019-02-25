@@ -138,7 +138,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri, 10:20" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtF-Hv-cch">
-                                                    <rect key="frame" x="337.5" y="10" width="60.5" height="17"/>
+                                                    <rect key="frame" x="243.5" y="10" width="60.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -226,7 +226,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="outgoing message cell" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhb-zh-ND8">
-                                                    <rect key="frame" x="231" y="8" width="167" height="19.5"/>
+                                                    <rect key="frame" x="137" y="8" width="167" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -237,6 +237,7 @@
                                                 <constraint firstItem="dhb-zh-ND8" firstAttribute="width" relation="lessThanOrEqual" secondItem="MfR-h0-Yoa" secondAttribute="width" multiplier="0.75" id="DJI-D5-q2e"/>
                                                 <constraint firstAttribute="trailing" secondItem="dhb-zh-ND8" secondAttribute="trailing" constant="16" id="Ioz-w4-hnQ"/>
                                                 <constraint firstItem="dhb-zh-ND8" firstAttribute="top" secondItem="MfR-h0-Yoa" secondAttribute="top" constant="8" id="ctU-Aj-NMM"/>
+                                                <constraint firstItem="dhb-zh-ND8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MfR-h0-Yoa" secondAttribute="leading" constant="20" symbolic="YES" id="eei-4P-Sao"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -260,6 +261,7 @@
                                             <constraints>
                                                 <constraint firstItem="fCF-yi-hKv" firstAttribute="top" secondItem="NLV-su-0Dk" secondAttribute="top" constant="8" id="3cz-qn-FVt"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fCF-yi-hKv" secondAttribute="bottom" constant="8" id="Fse-80-Wsk"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fCF-yi-hKv" secondAttribute="trailing" constant="20" symbolic="YES" id="eW7-Jp-y9E"/>
                                                 <constraint firstItem="fCF-yi-hKv" firstAttribute="width" relation="lessThanOrEqual" secondItem="NLV-su-0Dk" secondAttribute="width" multiplier="0.75" id="oTY-LR-11m"/>
                                                 <constraint firstItem="fCF-yi-hKv" firstAttribute="leading" secondItem="NLV-su-0Dk" secondAttribute="leading" constant="16" id="wha-zZ-0Al"/>
                                             </constraints>

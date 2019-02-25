@@ -16,7 +16,7 @@ final class ConversationListProvider {
                                       lastMessageDate: Date(), isRecipentOnline: true,
                                       hasUnreadMessages: true)
 
-        let second = ConversationModel(recipent: "User_2", lastMessage: "hell o my dear oh welcome friend",
+        let second = ConversationModel(recipent: "User_2", lastMessage: "hell o my dear oh welcome friend, im really happy to hear from you!",
                                        lastMessageDate: Date().addingTimeInterval(-60 * 10),
                                        isRecipentOnline: true, hasUnreadMessages: true)
 

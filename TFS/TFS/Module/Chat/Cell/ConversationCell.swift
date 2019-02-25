@@ -28,6 +28,6 @@ final class ConversationCell: UITableViewCell {
         messageLabel.font = model.messageFont
         dateLabel.text = model.dateText
 
-        backgroundColor = model.isOnline ? #colorLiteral(red: 0.3076745272, green: 0.5609909296, blue: 0.9542145133, alpha: 0.8) : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        backgroundColor = model.isOnline ? #colorLiteral(red: 0.9876924157, green: 0.9783714414, blue: 0, alpha: 0.5) : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
 }
