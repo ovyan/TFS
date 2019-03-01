@@ -90,7 +90,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         
         let cancel = UIAlertAction(title: "Close", style: .cancel) { [weak self] _ in
-            self?.dismiss(animated: true)
+            self?.alert.dismiss(animated: true)
         }
         alert.addAction(cancel)
     }
