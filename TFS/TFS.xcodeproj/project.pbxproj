@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DED209F022304F46004032BA /* Themes.m in Sources */ = {isa = PBXBuildFile; fileRef = DED209EF22304F46004032BA /* Themes.m */; };
+		DED209F422305008004032BA /* ThemesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED209F322305008004032BA /* ThemesViewController.m */; };
+		DED209F722305304004032BA /* ThemesViewController-swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED209F622305304004032BA /* ThemesViewController-swift.swift */; };
+		DED209F922305504004032BA /* AppThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED209F822305504004032BA /* AppThemeManager.swift */; };
 		E619CFE6220C51E4001F557F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619CFE5220C51E4001F557F /* AppDelegate.swift */; };
 		E619CFE8220C51E4001F557F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619CFE7220C51E4001F557F /* ProfileViewController.swift */; };
 		E619CFEB220C51E4001F557F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E619CFE9220C51E4001F557F /* Main.storyboard */; };
@@ -26,6 +30,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DED209ED22304F46004032BA /* TFS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TFS-Bridging-Header.h"; sourceTree = "<group>"; };
+		DED209EE22304F46004032BA /* Themes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Themes.h; sourceTree = "<group>"; };
+		DED209EF22304F46004032BA /* Themes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Themes.m; sourceTree = "<group>"; };
+		DED209F222305008004032BA /* ThemesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemesViewController.h; sourceTree = "<group>"; };
+		DED209F322305008004032BA /* ThemesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemesViewController.m; sourceTree = "<group>"; };
+		DED209F522305290004032BA /* ThemesViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemesViewControllerDelegate.h; sourceTree = "<group>"; };
+		DED209F622305304004032BA /* ThemesViewController-swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThemesViewController-swift.swift"; sourceTree = "<group>"; };
+		DED209F822305504004032BA /* AppThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeManager.swift; sourceTree = "<group>"; };
 		E619CFE2220C51E4001F557F /* TFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E619CFE5220C51E4001F557F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E619CFE7220C51E4001F557F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +69,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DED209F122304FF0004032BA /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				DED209F222305008004032BA /* ThemesViewController.h */,
+				DED209F322305008004032BA /* ThemesViewController.m */,
+				DED209F522305290004032BA /* ThemesViewControllerDelegate.h */,
+				DED209F622305304004032BA /* ThemesViewController-swift.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
 		E619CFD9220C51E4001F557F = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +118,7 @@
 			children = (
 				E6F378A02224537700794DD5 /* ConversationListProvider.swift */,
 				E6F378A12224537700794DD5 /* DialogMessageProvider.swift */,
+				DED209F822305504004032BA /* AppThemeManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -103,6 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				E6F378A42224548800794DD5 /* ConversationModel.swift */,
+				DED209EE22304F46004032BA /* Themes.h */,
+				DED209EF22304F46004032BA /* Themes.m */,
+				DED209ED22304F46004032BA /* TFS-Bridging-Header.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +137,7 @@
 		E68EF6E6222098020060B8F1 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				DED209F122304FF0004032BA /* Themes */,
 				E6F378A6222454D900794DD5 /* Dialog */,
 				E6F378962224522100794DD5 /* Chat */,
 				E68EF6E72220985D0060B8F1 /* Profile */,
@@ -193,6 +221,7 @@
 				TargetAttributes = {
 					E619CFE1220C51E4001F557F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -232,11 +261,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED209F922305504004032BA /* AppThemeManager.swift in Sources */,
 				E6F378A22224537700794DD5 /* ConversationListProvider.swift in Sources */,
 				E6F378A52224548800794DD5 /* ConversationModel.swift in Sources */,
+				DED209F422305008004032BA /* ThemesViewController.m in Sources */,
 				E6F378A92224551100794DD5 /* ConversationViewController.swift in Sources */,
+				DED209F722305304004032BA /* ThemesViewController-swift.swift in Sources */,
 				E6F3789B222452B300794DD5 /* ConversationCellViewModelImp.swift in Sources */,
 				E6E54C28220DC50E00352248 /* Output.swift in Sources */,
+				DED209F022304F46004032BA /* Themes.m in Sources */,
 				E619CFE8220C51E4001F557F /* ProfileViewController.swift in Sources */,
 				E6F3789D222452CF00794DD5 /* ConversationCell.swift in Sources */,
 				E619CFEE220C51E4001F557F /* TFS.xcdatamodeld in Sources */,
@@ -390,6 +423,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S77KJ672M8;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -404,6 +439,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = indexStorm.TFS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LOG_ENABLED";
+				SWIFT_OBJC_BRIDGING_HEADER = "TFS/Model/TFS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -413,6 +450,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S77KJ672M8;
 				INFOPLIST_FILE = TFS/Info.plist;
@@ -422,6 +461,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = indexStorm.TFS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TFS/Model/TFS-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

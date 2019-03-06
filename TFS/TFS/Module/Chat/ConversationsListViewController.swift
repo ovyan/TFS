@@ -16,6 +16,10 @@ final class ConversationsListViewController: UIViewController {
     @IBOutlet
     private var tableView: UITableView!
 
+    // MARK: - Members
+
+    private lazy var themeManager = AppThemeManager()
+
     // MARK: - Overrides
 
     override func viewDidLoad() {
@@ -82,9 +86,56 @@ final class ConversationsListViewController: UIViewController {
 
     @objc
     func showProfile() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let profile = storyboard.instantiateViewController(withIdentifier: "ProfileVC")
+        let profile = instantiateController(id: "ProfileVC")
         present(profile, animated: true)
+    }
+
+    @IBAction
+    private func showThemes(_ sender: UIBarButtonItem) {
+        // let themes: ThemesViewController = instantiateController(id: "Themes-vc")
+        let themes: ThemesViewController = instantiateController(id: "Themes-vc-swift")
+
+        //themes.delegate = self
+        themes.model = getThemes()
+
+        let module: ThemesModule = themes
+        module.onColorChanged = { [weak self] newColor in
+            self?.updateAppereance(with: newColor)
+            self?.logThemeChanging(selectedTheme: newColor)
+        }
+
+        present(themes, animated: true)
+    }
+
+    // MARK: - Helpers
+
+    private func instantiateController<T: UIViewController>(id: String) -> T {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        return storyboard.instantiateViewController(withIdentifier: id) as! T
+    }
+
+    private func getThemes() -> Themes {
+        let result = Themes(firstColor: .green,
+                            andSecondColor: .blue,
+                            andThirdColor: .yellow)
+
+        return result
+    }
+}
+
+extension ConversationsListViewController: ​ThemesViewControllerDelegate {
+    func themesViewController(_ controller: ThemesViewController, didSelectTheme selectedTheme: UIColor) {
+        updateAppereance(with: selectedTheme)
+        logThemeChanging(selectedTheme: selectedTheme)
+    }
+
+    private func updateAppereance(with color: UIColor) {
+        themeManager.setTheme(color)
+    }
+
+    private func logThemeChanging(selectedTheme: UIColor) {
+        print("theme color changed to \(selectedTheme)")
     }
 }
 
