@@ -12,7 +12,6 @@
 		DED209F722305304004032BA /* ThemesViewController-swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED209F622305304004032BA /* ThemesViewController-swift.swift */; };
 		DED209F922305504004032BA /* AppThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED209F822305504004032BA /* AppThemeManager.swift */; };
 		E619CFE6220C51E4001F557F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619CFE5220C51E4001F557F /* AppDelegate.swift */; };
-		E619CFE8220C51E4001F557F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619CFE7220C51E4001F557F /* ProfileViewController.swift */; };
 		E619CFEB220C51E4001F557F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E619CFE9220C51E4001F557F /* Main.storyboard */; };
 		E619CFEE220C51E4001F557F /* TFS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E619CFEC220C51E4001F557F /* TFS.xcdatamodeld */; };
 		E619CFF0220C51E5001F557F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E619CFEF220C51E5001F557F /* Assets.xcassets */; };
@@ -27,6 +26,21 @@
 		E6F378A52224548800794DD5 /* ConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F378A42224548800794DD5 /* ConversationModel.swift */; };
 		E6F378A92224551100794DD5 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F378A82224551100794DD5 /* ConversationViewController.swift */; };
 		E6F378AB2224552000794DD5 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F378AA2224552000794DD5 /* MessageCell.swift */; };
+		E6FF24DB2239943A00EE139F /* ProfileControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24D82239943A00EE139F /* ProfileControllerViewModel.swift */; };
+		E6FF24DC2239943A00EE139F /* ProfileControllerViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24D92239943A00EE139F /* ProfileControllerViewModelImp.swift */; };
+		E6FF24DD2239943A00EE139F /* ProfileControllerViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24DA2239943A00EE139F /* ProfileControllerViewModelOutput.swift */; };
+		E6FF24E1223994D400EE139F /* UserInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24DF223994D300EE139F /* UserInfoProvider.swift */; };
+		E6FF24E2223994D400EE139F /* UserInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24E0223994D300EE139F /* UserInfoDataManager.swift */; };
+		E6FF24F02239951C00EE139F /* NonThrowingAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24E72239951C00EE139F /* NonThrowingAsyncOperation.swift */; };
+		E6FF24F12239951C00EE139F /* ThrowingLoadingAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24E82239951C00EE139F /* ThrowingLoadingAsyncOperation.swift */; };
+		E6FF24F22239951C00EE139F /* ThrowingAsyncOperationWithCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24E92239951C00EE139F /* ThrowingAsyncOperationWithCompletion.swift */; };
+		E6FF24F32239951C00EE139F /* OperationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24EA2239951C00EE139F /* OperationWorker.swift */; };
+		E6FF24F42239951C00EE139F /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24EB2239951C00EE139F /* AsyncOperation.swift */; };
+		E6FF24F52239951C00EE139F /* GCDWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24ED2239951C00EE139F /* GCDWorker.swift */; };
+		E6FF24F62239951C00EE139F /* AsyncWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24EE2239951C00EE139F /* AsyncWorker.swift */; };
+		E6FF24F72239951C00EE139F /* Finder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24EF2239951C00EE139F /* Finder.swift */; };
+		E6FF24FA223995B600EE139F /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24F9223995B600EE139F /* UserInfoModel.swift */; };
+		E6FF24FD2239A1B200EE139F /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FF24FC2239A1B200EE139F /* ProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +54,6 @@
 		DED209F822305504004032BA /* AppThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeManager.swift; sourceTree = "<group>"; };
 		E619CFE2220C51E4001F557F /* TFS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E619CFE5220C51E4001F557F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E619CFE7220C51E4001F557F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E619CFEA220C51E4001F557F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E619CFED220C51E4001F557F /* TFS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TFS.xcdatamodel; sourceTree = "<group>"; };
 		E619CFEF220C51E5001F557F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +69,21 @@
 		E6F378A42224548800794DD5 /* ConversationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationModel.swift; sourceTree = "<group>"; };
 		E6F378A82224551100794DD5 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		E6F378AA2224552000794DD5 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		E6FF24D82239943A00EE139F /* ProfileControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileControllerViewModel.swift; sourceTree = "<group>"; };
+		E6FF24D92239943A00EE139F /* ProfileControllerViewModelImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileControllerViewModelImp.swift; sourceTree = "<group>"; };
+		E6FF24DA2239943A00EE139F /* ProfileControllerViewModelOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileControllerViewModelOutput.swift; sourceTree = "<group>"; };
+		E6FF24DF223994D300EE139F /* UserInfoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoProvider.swift; sourceTree = "<group>"; };
+		E6FF24E0223994D300EE139F /* UserInfoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoDataManager.swift; sourceTree = "<group>"; };
+		E6FF24E72239951C00EE139F /* NonThrowingAsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonThrowingAsyncOperation.swift; sourceTree = "<group>"; };
+		E6FF24E82239951C00EE139F /* ThrowingLoadingAsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrowingLoadingAsyncOperation.swift; sourceTree = "<group>"; };
+		E6FF24E92239951C00EE139F /* ThrowingAsyncOperationWithCompletion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrowingAsyncOperationWithCompletion.swift; sourceTree = "<group>"; };
+		E6FF24EA2239951C00EE139F /* OperationWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationWorker.swift; sourceTree = "<group>"; };
+		E6FF24EB2239951C00EE139F /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		E6FF24ED2239951C00EE139F /* GCDWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDWorker.swift; sourceTree = "<group>"; };
+		E6FF24EE2239951C00EE139F /* AsyncWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncWorker.swift; sourceTree = "<group>"; };
+		E6FF24EF2239951C00EE139F /* Finder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finder.swift; sourceTree = "<group>"; };
+		E6FF24F9223995B600EE139F /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		E6FF24FC2239A1B200EE139F /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +97,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DED209F122304FF0004032BA /* Themes */ = {
-			isa = PBXGroup;
-			children = (
-				DED209F222305008004032BA /* ThemesViewController.h */,
-				DED209F322305008004032BA /* ThemesViewController.m */,
-				DED209F522305290004032BA /* ThemesViewControllerDelegate.h */,
-				DED209F622305304004032BA /* ThemesViewController-swift.swift */,
-			);
-			path = Themes;
-			sourceTree = "<group>";
-		};
 		E619CFD9220C51E4001F557F = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +116,7 @@
 		E619CFE4220C51E4001F557F /* TFS */ = {
 			isa = PBXGroup;
 			children = (
+				E6FF24E32239951C00EE139F /* Core */,
 				E68EF6E3222097490060B8F1 /* Service */,
 				E68EF6E42220978E0060B8F1 /* Model */,
 				E68EF6E6222098020060B8F1 /* Module */,
@@ -119,6 +137,7 @@
 				E6F378A02224537700794DD5 /* ConversationListProvider.swift */,
 				E6F378A12224537700794DD5 /* DialogMessageProvider.swift */,
 				DED209F822305504004032BA /* AppThemeManager.swift */,
+				E6FF24DE223994C800EE139F /* Profile */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -126,10 +145,14 @@
 		E68EF6E42220978E0060B8F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E6F378A42224548800794DD5 /* ConversationModel.swift */,
+				DED209F222305008004032BA /* ThemesViewController.h */,
+				DED209F322305008004032BA /* ThemesViewController.m */,
+				DED209F522305290004032BA /* ThemesViewControllerDelegate.h */,
+				DED209F622305304004032BA /* ThemesViewController-swift.swift */,
 				DED209EE22304F46004032BA /* Themes.h */,
 				DED209EF22304F46004032BA /* Themes.m */,
 				DED209ED22304F46004032BA /* TFS-Bridging-Header.h */,
+				E6FF24FB2239966100EE139F /* Main Models */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,7 +160,6 @@
 		E68EF6E6222098020060B8F1 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				DED209F122304FF0004032BA /* Themes */,
 				E6F378A6222454D900794DD5 /* Dialog */,
 				E6F378962224522100794DD5 /* Chat */,
 				E68EF6E72220985D0060B8F1 /* Profile */,
@@ -148,7 +170,8 @@
 		E68EF6E72220985D0060B8F1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				E619CFE7220C51E4001F557F /* ProfileViewController.swift */,
+				E6FF24D72239941900EE139F /* ViewModel */,
+				E6FF24FC2239A1B200EE139F /* ProfileController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -187,6 +210,81 @@
 				E6F378AA2224552000794DD5 /* MessageCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		E6FF24D72239941900EE139F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E6FF24D82239943A00EE139F /* ProfileControllerViewModel.swift */,
+				E6FF24D92239943A00EE139F /* ProfileControllerViewModelImp.swift */,
+				E6FF24DA2239943A00EE139F /* ProfileControllerViewModelOutput.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E6FF24DE223994C800EE139F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E6FF24E0223994D300EE139F /* UserInfoDataManager.swift */,
+				E6FF24DF223994D300EE139F /* UserInfoProvider.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E6FF24E32239951C00EE139F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E6FF24E42239951C00EE139F /* AsyncWorker */,
+				E6FF24EF2239951C00EE139F /* Finder.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E6FF24E42239951C00EE139F /* AsyncWorker */ = {
+			isa = PBXGroup;
+			children = (
+				E6FF24E52239951C00EE139F /* Operation */,
+				E6FF24EC2239951C00EE139F /* GCD */,
+				E6FF24EE2239951C00EE139F /* AsyncWorker.swift */,
+			);
+			path = AsyncWorker;
+			sourceTree = "<group>";
+		};
+		E6FF24E52239951C00EE139F /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				E6FF24E62239951C00EE139F /* imp */,
+				E6FF24EA2239951C00EE139F /* OperationWorker.swift */,
+				E6FF24EB2239951C00EE139F /* AsyncOperation.swift */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		E6FF24E62239951C00EE139F /* imp */ = {
+			isa = PBXGroup;
+			children = (
+				E6FF24E72239951C00EE139F /* NonThrowingAsyncOperation.swift */,
+				E6FF24E82239951C00EE139F /* ThrowingLoadingAsyncOperation.swift */,
+				E6FF24E92239951C00EE139F /* ThrowingAsyncOperationWithCompletion.swift */,
+			);
+			path = imp;
+			sourceTree = "<group>";
+		};
+		E6FF24EC2239951C00EE139F /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				E6FF24ED2239951C00EE139F /* GCDWorker.swift */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		E6FF24FB2239966100EE139F /* Main Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6F378A42224548800794DD5 /* ConversationModel.swift */,
+				E6FF24F9223995B600EE139F /* UserInfoModel.swift */,
+			);
+			path = "Main Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,22 +359,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6FF24DC2239943A00EE139F /* ProfileControllerViewModelImp.swift in Sources */,
 				DED209F922305504004032BA /* AppThemeManager.swift in Sources */,
+				E6FF24F52239951C00EE139F /* GCDWorker.swift in Sources */,
 				E6F378A22224537700794DD5 /* ConversationListProvider.swift in Sources */,
+				E6FF24DB2239943A00EE139F /* ProfileControllerViewModel.swift in Sources */,
 				E6F378A52224548800794DD5 /* ConversationModel.swift in Sources */,
+				E6FF24F32239951C00EE139F /* OperationWorker.swift in Sources */,
+				E6FF24FD2239A1B200EE139F /* ProfileController.swift in Sources */,
+				E6FF24F72239951C00EE139F /* Finder.swift in Sources */,
 				DED209F422305008004032BA /* ThemesViewController.m in Sources */,
+				E6FF24F02239951C00EE139F /* NonThrowingAsyncOperation.swift in Sources */,
 				E6F378A92224551100794DD5 /* ConversationViewController.swift in Sources */,
 				DED209F722305304004032BA /* ThemesViewController-swift.swift in Sources */,
 				E6F3789B222452B300794DD5 /* ConversationCellViewModelImp.swift in Sources */,
+				E6FF24F22239951C00EE139F /* ThrowingAsyncOperationWithCompletion.swift in Sources */,
 				E6E54C28220DC50E00352248 /* Output.swift in Sources */,
 				DED209F022304F46004032BA /* Themes.m in Sources */,
-				E619CFE8220C51E4001F557F /* ProfileViewController.swift in Sources */,
+				E6FF24F62239951C00EE139F /* AsyncWorker.swift in Sources */,
+				E6FF24F12239951C00EE139F /* ThrowingLoadingAsyncOperation.swift in Sources */,
+				E6FF24F42239951C00EE139F /* AsyncOperation.swift in Sources */,
+				E6FF24E2223994D400EE139F /* UserInfoDataManager.swift in Sources */,
+				E6FF24FA223995B600EE139F /* UserInfoModel.swift in Sources */,
 				E6F3789D222452CF00794DD5 /* ConversationCell.swift in Sources */,
 				E619CFEE220C51E4001F557F /* TFS.xcdatamodeld in Sources */,
 				E6F3789F2224532000794DD5 /* ConversationsListViewController.swift in Sources */,
+				E6FF24DD2239943A00EE139F /* ProfileControllerViewModelOutput.swift in Sources */,
 				E619CFE6220C51E4001F557F /* AppDelegate.swift in Sources */,
 				E6F378A32224537700794DD5 /* DialogMessageProvider.swift in Sources */,
 				E6F378992224526E00794DD5 /* ConversationCellViewModel.swift in Sources */,
+				E6FF24E1223994D400EE139F /* UserInfoProvider.swift in Sources */,
 				E6F378AB2224552000794DD5 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
