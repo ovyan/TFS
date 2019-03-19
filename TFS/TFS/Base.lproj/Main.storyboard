@@ -199,7 +199,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zn-fc-a9j">
                                 <rect key="frame" x="80" y="30" width="68" height="48"/>
-                                <color key="backgroundColor" red="1" green="0.30982448629999998" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.47058823529999999" blue="0.94117647059999998" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="z8X-NK-3r3"/>
                                 </constraints>
@@ -217,7 +217,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyu-af-kjc">
                                 <rect key="frame" x="275" y="30" width="68" height="48"/>
-                                <color key="backgroundColor" red="0.31209242860000003" green="0.82088345289999998" blue="0.2529879136" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.22352941179999999" green="0.68627450980000004" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Operation">
                                     <color key="titleColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -461,7 +461,7 @@
         <!--Themes-vc-->
         <scene sceneID="hYu-A7-8Tf">
             <objects>
-                <viewController title="Themes-vc" id="zpb-qs-H2s" customClass="ThemesViewController" customModule="TFS_chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Themes-vc" id="zpb-qs-H2s" customClass="ThemesViewController" customModule="TFS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hy4-bH-Gei">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
