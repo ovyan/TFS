@@ -2,7 +2,7 @@
 //  UserInfoDataManager.swift
 //  TFS
 //
-//  Created by Mike Ovyan on 12/03/2019.
+//  Created by Mike Ovyan on 18/03/2019.
 //  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
@@ -78,13 +78,7 @@ final class UserInfoDataManager {
             let about = defaults.value(forKey: self.aboutYouKey) as? String
             let imagePath = try self.getImagePath()
             let imageData = try? Data(contentsOf: imagePath)
-            var avatar = UIImage(named: "placeholder-user")
-            if imageData == nil {
-                avatar = UIImage(named: "placeholder-user")
-            } else {
-                avatar = UIImage(data: imageData!)
-            }
-            
+            let avatar = UIImage(data: imageData)
             let model = UserInfoModel(name: name, about: about, avatar: avatar)
 
             return model

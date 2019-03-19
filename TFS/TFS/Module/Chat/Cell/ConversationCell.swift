@@ -2,7 +2,7 @@
 //  ConversationCell.swift
 //  TFS
 //
-//  Created by Mike Ovyan on 24/02/2019.
+//  Created by Mike Ovyan on 18/03/2019.
 //  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
@@ -28,6 +28,6 @@ final class ConversationCell: UITableViewCell {
         messageLabel.font = model.messageFont
         dateLabel.text = model.dateText
 
-        backgroundColor = model.isOnline ? #colorLiteral(red: 0.9876924157, green: 0.9783714414, blue: 0, alpha: 0.5) : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        backgroundColor = model.isOnline ? #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 0.7033725792) : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
 }

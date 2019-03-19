@@ -2,7 +2,7 @@
 //  ThemesViewController-swift.swift
 //  TFS
 //
-//  Created by Mike Ovyan on 06/03/2019.
+//  Created by Mike Ovyan on 18/03/2019.
 //  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import UIKit
 protocol ThemesModule: class {
     var onColorChanged: ((UIColor) -> Void)? { get set }
 
-    var model: Themes? { get set }
+    var model: Themes! { get set }
 }
 
 final class ThemesViewController: UIViewController, ThemesModule {
@@ -30,7 +30,7 @@ final class ThemesViewController: UIViewController, ThemesModule {
 
     var onColorChanged: ((UIColor) -> Void)?
 
-    var model: Themes?
+    var model: Themes!
 
     // MARK: - Actions
 
@@ -58,6 +58,7 @@ final class ThemesViewController: UIViewController, ThemesModule {
             fatalError()
         }
 
+        navigationController?.navigationBar.backgroundColor = backgroundColor
         view.backgroundColor = backgroundColor
         onColorChanged?(backgroundColor)
     }

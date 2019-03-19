@@ -2,13 +2,13 @@
 //  ConversationsListViewController.swift
 //  TFS
 //
-//  Created by Mike Ovyan on 24/02/2019.
+//  Created by Mike Ovyan on 18/03/2019.
 //  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
 import UIKit
 
-let showDialogSegue = "ShowDia"
+private let showDialogSegue = "idShowDialog"
 
 final class ConversationsListViewController: UIViewController {
     // MARK: - Outlets
@@ -16,14 +16,11 @@ final class ConversationsListViewController: UIViewController {
     @IBOutlet
     private var tableView: UITableView!
 
-    // MARK: - Members
-
-    private lazy var themeManager = AppThemeManager()
-
     // MARK: - Overrides
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupModule()
         addBarButton()
 
         tableView.estimatedRowHeight = 74
@@ -42,18 +39,67 @@ final class ConversationsListViewController: UIViewController {
         guard
             segue.identifier == showDialogSegue,
             let dialog = segue.destination as? ConversationViewController,
-            let model = sender as? ConversationCellViewModel else {
+            let model = sender as? ChatModel else {
             super.prepare(for: segue, sender: sender)
             return
         }
 
-        dialog.title = model.name
+        dialogInput = dialog.updateChat
+        dialog.communicator = communicator
+        dialog.chat = model
+        dialog.title = model.receiver.userName ?? "no-name"
     }
+
+    // MARK: - Members
+
+    private lazy var themeManager = AppThemeManager()
+
+    private let communicator: MultipeerCommunicator = {
+        MultipeerCommunicatorImp()
+    }()
+
+    private lazy var communicationManager: CommunicationManager = {
+        let manager = CommunicationManager()
+        communicator.delegate = manager
+        communicator.isOnline = true
+
+        return manager
+    }()
+
+    private var dialogInput: (([ChatModel]) -> Void)?
 
     // MARK: - Methods
 
-    func addBarButton() {
-        let image = UIImage(named: "placeholder-user1")
+    private func setupModule() {
+        communicationManager.activeChatListUpdated = { [weak self] chatList in
+            guard let `self` = self else { return }
+            self.activeChats = chatList
+
+            DispatchQueue.main.async {
+                self.dialogInput?(chatList)
+                self.tableView.reloadData()
+            }
+        }
+
+        communicationManager.offlineChatListUpdated = { [weak self] chatList in
+            DispatchQueue.main.async {
+                self?.dialogInput?(chatList)
+            }
+        }
+    }
+
+    private func makeCellViewModel(from chat: ChatModel) -> ConversationCellViewModelImp {
+        let model = ConversationModel(recipent: chat.receiver.userName ?? "no-name",
+                                      lastMessage: chat.lastMessageText,
+                                      lastMessageDate: chat.entries.last?.receivedAt,
+                                      isRecipentOnline: chat.receiver.isOnline,
+                                      hasUnreadMessages: false)
+
+        return ConversationCellViewModelImp(with: model)
+    }
+
+    private func addBarButton() {
+        let image = UIImage(named: "imgBarButtonProfile")
         let button = UIButton(type: .custom)
 
         button.setImage(image, for: .normal)
@@ -66,37 +112,26 @@ final class ConversationsListViewController: UIViewController {
 
     // MARK: - Members
 
-    let sections = ["Online", "History"]
+    private let sections = ["Online", "History"]
 
-    lazy var activeConversations: [ConversationCellViewModel] = {
-        let provider = ConversationListProvider()
-        let models = provider.getOnline()
-
-        return models.map { ConversationCellViewModelImp(with: $0) }
-    }()
-
-    lazy var historyConversations: [ConversationCellViewModel] = {
-        let provider = ConversationListProvider()
-        let models = provider.gethistory()
-
-        return models.map { ConversationCellViewModelImp(with: $0) }
-    }()
+    private var activeChats = [ChatModel]()
 
     // MARK: - Actions
 
     @objc
-    func showProfile() {
-        let profile = instantiateController(id: "ProfileVC")
+    private func showProfile() {
+        let profile = instantiateController(id: "Profile-vc")
         present(profile, animated: true)
     }
 
     @IBAction
     private func showThemes(_ sender: UIBarButtonItem) {
-        // let themes: ThemesViewController = instantiateController(id: "Themes-vc")
-        let themes: ThemesViewController = instantiateController(id: "Themes-vc-swift")
+        // let (nav, themes): (UINavigationController, ThemesViewController) = instantiateNavigationRootController(id: "Themes-vc")
+        let (nav, themes): (UINavigationController, ThemesViewController) = instantiateNavigationRootController(id: "Themes-vc-swift")
+        let provider = ThemeProvider()
 
         //themes.delegate = self
-        themes.model = getThemes()
+        themes.model = provider.get()
 
         let module: ThemesModule = themes
         module.onColorChanged = { [weak self] newColor in
@@ -104,23 +139,22 @@ final class ConversationsListViewController: UIViewController {
             self?.logThemeChanging(selectedTheme: newColor)
         }
 
-        present(themes, animated: true)
+        present(nav, animated: true)
     }
 
     // MARK: - Helpers
+
+    private func instantiateNavigationRootController<T: UIViewController>(id: String) -> (UINavigationController, T) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let nav = storyboard.instantiateViewController(withIdentifier: id) as? UINavigationController else { fatalError() }
+
+        return (nav, nav.viewControllers.first as! T)
+    }
 
     private func instantiateController<T: UIViewController>(id: String) -> T {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
         return storyboard.instantiateViewController(withIdentifier: id) as! T
-    }
-
-    private func getThemes() -> Themes {
-        let result = Themes(firstColor: .green,
-                            andSecondColor: .blue,
-                            andThirdColor: .yellow)
-
-        return result
     }
 }
 
@@ -135,25 +169,21 @@ extension ConversationsListViewController: ​ThemesViewControllerDelegate {
     }
 
     private func logThemeChanging(selectedTheme: UIColor) {
-        print("theme color changed to \(selectedTheme)")
+        print("did change theme color to \(selectedTheme)")
     }
 }
 
 extension ConversationsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model: ConversationCellViewModel
-        if indexPath.section == 0 {
-            model = activeConversations[indexPath.row]
-        } else {
-            model = historyConversations[indexPath.row]
-        }
+        let model = activeChats[indexPath.row]
+
         performSegue(withIdentifier: showDialogSegue, sender: model)
     }
 }
 
 extension ConversationsListViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return 1 // sections.count
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -161,11 +191,7 @@ extension ConversationsListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return activeConversations.count
-        }
-
-        return historyConversations.count
+        return activeChats.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -176,10 +202,9 @@ extension ConversationsListViewController: UITableViewDataSource {
         return cell
     }
 
-    func viewModel(for indexPath: IndexPath) -> ConversationCellViewModel {
-        if indexPath.section == 0 {
-            return activeConversations[indexPath.row]
-        }
-        return historyConversations[indexPath.row]
+    private func viewModel(for indexPath: IndexPath) -> ConversationCellViewModel {
+        let chat = activeChats[indexPath.row]
+
+        return makeCellViewModel(from: chat)
     }
 }

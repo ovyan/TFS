@@ -2,17 +2,13 @@
 //  ThemesViewController.m
 //  TFS
 //
-//  Created by Mike Ovyan on 06/03/2019.
+//  Created by Mike Ovyan on 18/03/2019.
 //  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
 #import "ThemesViewController.h"
 
 @interface ThemesViewController ()
-
-#pragma MARK: - Outlets
-
-@property (retain, nonatomic) IBOutletCollection(UIButton) NSArray *themeButtons;
 
 @end
 
@@ -21,7 +17,7 @@
 @synthesize model = _model;
 @synthesize delegate = _delegate;
 
-#pragma MARK: - Life Cycle
+#pragma MARK: - Overrides
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,7 +28,7 @@
 }
 
 - (void)dealloc {
-    [_themeButtons release];
+    [themeButtons release];
     [_model release];
     [super dealloc];
 }
@@ -67,7 +63,7 @@
 }
 
 - (IBAction)changeTheme:(UIButton *)sender {
-    NSUInteger index = [_themeButtons indexOfObject:sender];
+    NSUInteger index = [themeButtons indexOfObject:sender];
     UIColor* backgroundColor;
 
     switch (index) {
@@ -88,11 +84,11 @@
             break;
     }
 
+    [[[self navigationController] navigationBar] setBackgroundColor:backgroundColor];
     [[self view] setBackgroundColor:backgroundColor];
     if (_delegate) {
         [_delegate themesViewController:self didSelectTheme:backgroundColor];
     }
 }
-
 
 @end

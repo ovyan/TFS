@@ -2,7 +2,7 @@
 //  DialogCell.swift
 //  TFS
 //
-//  Created by Mike Ovyan on 24/02/2019.
+//  Created by Mike Ovyan on 18/03/2019.
 //  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
@@ -18,6 +18,9 @@ final class MessageCell: UITableViewCell, MessageCellConfiguration {
     @IBOutlet
     private var messageLabel: UILabel!
 
+    @IBOutlet
+    private var dateLabel: UILabel!
+
     // MARK: - Members
 
     var messageText: String? {
@@ -30,7 +33,8 @@ final class MessageCell: UITableViewCell, MessageCellConfiguration {
 
     // MARK: - Interface
 
-    func setup(with text: String) {
+    func setup(with text: String, date: Date) {
         messageLabel.text = text
+        dateLabel.text = date.humanString
     }
 }

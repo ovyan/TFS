@@ -2,7 +2,7 @@
 //  ThemesViewController.h
 //  TFS
 //
-//  Created by Mike Ovyan on 06/03/2019.
+//  Created by Mike Ovyan on 18/03/2019.
 //  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
@@ -13,6 +13,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ThemesViewController : UIViewController
+{
+    IBOutletCollection(UIButton) NSArray *themeButtons;
+}
 
 @property (assign, nonatomic) id <​ThemesViewControllerDelegate> delegate;
 

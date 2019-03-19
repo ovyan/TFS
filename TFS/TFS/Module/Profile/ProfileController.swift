@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TFS
 //
-//  Created by Mike Ovyan on 12/03/2019.
+//  Created by Mike Ovyan on 18/03/2019.
 //  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
@@ -100,7 +100,8 @@ final class ProfileController: UIViewController {
         changeAvatarButton.layer.cornerRadius = cornerRadius
         changeAvatarButton.clipsToBounds = true
 
-        let highlightedImage = UIImage(named: "slr-camera-2-xxl")?.withRenderingMode(.alwaysTemplate)
+        let highlightedImage = UIImage(named: "icnCamera")?.withRenderingMode(.alwaysTemplate)
+        changeAvatarButton.imageView?.tintColor = CUI.Profile.highlightColor
         changeAvatarButton.setImage(highlightedImage, for: .highlighted)
 
         changeAvatarButton.imageView?.contentMode = .scaleAspectFit

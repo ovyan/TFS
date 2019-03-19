@@ -2,7 +2,7 @@
 //  AsyncWorker.swift
 //  TFS
 //
-//  Created by Mike Ovyan on 12/03/2019.
+//  Created by Mike Ovyan on 18/03/2019.
 //  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
@@ -13,6 +13,8 @@ typealias VoidBlock = () -> Void
 typealias WorkerBlock = () throws -> Void
 
 typealias WorkerLoadBlock<M> = () throws -> M
+
+// ===
 
 typealias WorkerCompletion = (Error?) -> Void
 

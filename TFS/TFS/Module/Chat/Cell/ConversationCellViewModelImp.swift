@@ -2,7 +2,7 @@
 //  ConversationCellViewModelImp.swift
 //  TFS
 //
-//  Created by Mike Ovyan on 24/02/2019.
+//  Created by Mike Ovyan on 18/03/2019.
 //  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
@@ -43,15 +43,5 @@ final class ConversationCellViewModelImp: ConversationCellViewModel {
 
         isOnline = model.isRecipentOnline
         hasUnreadMessage = model.hasUnreadMessages
-    }
-}
-
-private extension Date {
-    var humanString: String {
-        let fmt = DateFormatter()
-        let isToday = Calendar.current.isDateInToday(self)
-        fmt.dateFormat = isToday ? "HH:mm" : "dd MMM"
-
-        return fmt.string(from: self)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  UserInfoProvider.swift
+//  ChatUser.swift
 //  TFS
 //
 //  Created by Mike Ovyan on 18/03/2019.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-final class UserInfoProvider {
-    // MARK: - Interface
+struct ChatUser: Hashable {
+    let userId: String
+    let userName: String?
 
-    // func get() -> UserInfoModel {}
+    var isOnline: Bool
 }

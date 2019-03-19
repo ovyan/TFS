@@ -2,7 +2,7 @@
 //  ProfileControllerViewModelImp.swift
 //  TFS
 //
-//  Created by Mike Ovyan on 12/03/2019.
+//  Created by Mike Ovyan on 18/03/2019.
 //  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
@@ -79,7 +79,7 @@ final class ProfileControllerViewModelImp: ProfileControllerViewModel {
     private func handleLoadedModel(_ model: UserInfoModel) {
         name = model.name
         aboutYou = model.about
-        image = model.avatar ?? UIImage(named: "placeholder-user")
+        image = model.avatar ?? UIImage(named: "imgProfilePlaceholder")
 
         if let avatar = image {
             let profileViewModel = ProfileViewModel(name: model.name, about: model.about, avatar: avatar)
@@ -119,7 +119,7 @@ final class ProfileControllerViewModelImp: ProfileControllerViewModel {
     private func updateView() {
         guard
             let name = name,
-            let avatar = image ?? UIImage(named: "placeholder-user") else { fatalError() }
+            let avatar = image ?? UIImage(named: "imgProfilePlaceholder") else { fatalError() }
 
         let profileViewModel = ProfileViewModel(name: name, about: aboutYou, avatar: avatar)
         needsViewUpdate?(profileViewModel)
