@@ -1,9 +1,9 @@
 //
 //  ThrowingLoadingAsyncOperation.swift
-//  TFS-chat
+//  TFS
 //
-//  Created by Evgeniy on 22/10/2018.
-//  Copyright © 2018 Evgeniy. All rights reserved.
+//  Created by Mike Ovyan on 12/03/2019.
+//  Copyright © 2019 Mike Ovyan. All rights reserved.
 //
 
 import Foundation
