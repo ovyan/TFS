@@ -99,7 +99,7 @@ final class ConversationsListViewController: UIViewController {
     }
 
     private func addBarButton() {
-        let image = UIImage(named: "imgBarButtonProfile")
+        let image = UIImage(named: "placeholder-user1")
         let button = UIButton(type: .custom)
 
         button.setImage(image, for: .normal)
@@ -120,13 +120,12 @@ final class ConversationsListViewController: UIViewController {
 
     @objc
     private func showProfile() {
-        let profile = instantiateController(id: "Profile-vc")
+        let profile = instantiateController(id: "ProfileVC")
         present(profile, animated: true)
     }
 
     @IBAction
     private func showThemes(_ sender: UIBarButtonItem) {
-        // let (nav, themes): (UINavigationController, ThemesViewController) = instantiateNavigationRootController(id: "Themes-vc")
         let (nav, themes): (UINavigationController, ThemesViewController) = instantiateNavigationRootController(id: "Themes-vc-swift")
         let provider = ThemeProvider()
 

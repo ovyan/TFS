@@ -100,7 +100,7 @@ final class ProfileController: UIViewController {
         changeAvatarButton.layer.cornerRadius = cornerRadius
         changeAvatarButton.clipsToBounds = true
 
-        let highlightedImage = UIImage(named: "icnCamera")?.withRenderingMode(.alwaysTemplate)
+        let highlightedImage = UIImage(named: "camera-2")?.withRenderingMode(.alwaysTemplate)
         changeAvatarButton.imageView?.tintColor = CUI.Profile.highlightColor
         changeAvatarButton.setImage(highlightedImage, for: .highlighted)
 
@@ -165,25 +165,25 @@ final class ProfileController: UIViewController {
 
     @IBAction
     private func pickImage() {
-        let alertController = UIAlertController(title: "Выбери изображение профиля",
+        let alertController = UIAlertController(title: "Choose image",
                                                 message: nil,
                                                 preferredStyle: .actionSheet)
 
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            let chooseFromGallery = UIAlertAction(title: "Выбрать из библиотеки", style: .default) { [weak self] _ in
+            let chooseFromGallery = UIAlertAction(title: "Library", style: .default) { [weak self] _ in
                 self?.presentImagePicker(with: .photoLibrary)
             }
             alertController.addAction(chooseFromGallery)
         }
 
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let takePhoto = UIAlertAction(title: "Сделать фото", style: .default) { [weak self] _ in
+            let takePhoto = UIAlertAction(title: "Make a photo", style: .default) { [weak self] _ in
                 self?.presentImagePicker(with: .camera)
             }
             alertController.addAction(takePhoto)
         }
 
-        let cancel = UIAlertAction(title: "Отмена", style: .cancel)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
         alertController.addAction(cancel)
 
         if let ipadPopover = alertController.popoverPresentationController {
