@@ -143,10 +143,10 @@
 			isa = PBXGroup;
 			children = (
 				E6B3B3EE224180CD00CD721B /* Core */,
-				E6B3B3FB224180CD00CD721B /* Extension */,
 				E6B3B417224180CE00CD721B /* Model */,
 				E6B3B401224180CE00CD721B /* Module */,
 				E6B3B422224180CE00CD721B /* Service */,
+				E6B3B3FB224180CD00CD721B /* Extension */,
 				E6B3B3EB224180CD00CD721B /* common */,
 				E619CFE9220C51E4001F557F /* Main.storyboard */,
 				E619CFE5220C51E4001F557F /* AppDelegate.swift */,
@@ -232,7 +232,6 @@
 				E6B3B402224180CE00CD721B /* Chat */,
 				E6B3B408224180CE00CD721B /* Dialog */,
 				E6B3B40C224180CE00CD721B /* Profile */,
-				E6B3B412224180CE00CD721B /* Themes */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -290,13 +289,6 @@
 				E6B3B410224180CE00CD721B /* ProfileControllerViewModelOutput.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		E6B3B412224180CE00CD721B /* Themes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Themes;
 			sourceTree = "<group>";
 		};
 		E6B3B417224180CE00CD721B /* Model */ = {
